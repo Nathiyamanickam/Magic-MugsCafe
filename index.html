@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Mugs Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page1" id="firstpage">
+
+        <div class="cartcount">
+            <i class="fas fa-shopping-cart" id="carttoggle"></i>
+            <span id="cartvalue">0</span>
+        </div>
+
+
+    <video autoplay loop muted plays-inline class="bgvideo">
+        <source src="Images/bgvideo.mp4" type="video/mp4">
+    </video>
+    
+    <header>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="logo">
+            <img src="Images/logo jpg.jpg" alt="Magic Mugs Cafe Logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#firstpage">Home</a></li>
+                <li><a href="#secondpage">About</a></li>
+                <li><a href="#thirdpage">Menu</a></li>
+                
+                <li><a href="#page2">Booking</a></li>
+                <li><a href="#page8">Login</a></li>
+                <li><a href="#contactpagee">Contact</a></li>
+                <li><a href="#page7">To-do list</a></li>
+                <li><a href="#reviewpage">Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Magic Mugs <i>cafe</i></h2>
+            <p>Life needs magic, Mugs gives you magic</p>
+        </div>
+    </div>
+</div>
+    <!-- About section -->
+    <div class="page2" id="secondpage">
+        <div class="aboutus">
+            <h1>ABOUT US</h1>
+        </div>
+        
+      
+        <div class="main">
+            Generate Color:<input type="color" id="controlpanel">
+            <button onclick="myColor()">Get Color</button>
+            <input type="text" id="box" readonly>
+        </div>
+
+        <div class="box1">
+            <div class="leftbox">
+   <img src="Images/about bg image.jpg" alt="">
+            </div>
+            <div class="rightbox">
+                <p>Welcome to <b>Magic Mugs cafe</b>,where every sip tells a story! Nested in the heart of the city, our cafe is not just a place to grab your daily does of caffeine,but a cozy nook where memories are brewed with care.Whether you're here for a quick coffee break or a leisurely hangout, We promise a magical experience in every cup.</p>
+            </div>
+        </div>
+    </div>
+<!-- Menu section -->
+<section class="showcart" id="thirdpage">
+    <div class="page3">
+        <div class="heading">
+            <h1>OUR MENU</h1>
+        </div>
+        
+        <div class="listproduct">
+            <div class="item">
+                <img src="Images/cappucino.JPG" alt="Cappuccino">
+                <h2>CAPPUCINO</h2>
+                <div class="price">$180</div>
+                <button type="button" class="addtocart" data-item="1">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="Images/mocha.JPG" alt="Mocha">
+                <h2>MOCHA</h2>
+                <div class="price">$200</div>
+                <button type="button" class="addtocart" data-item="2">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="Images/ice coffee.JPG" alt="Ice Coffee">
+                <h2>ICE COFFEE</h2>
+                <div class="price">$240</div>
+                <button type="button" class="addtocart" data-item="3">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="Images/nn.JPG" alt="Choco Coffee">
+                <h2>CHOCO COFFEE</h2>
+                <div class="price">$210</div>
+                <button type="button" class="addtocart" data-item="4">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="Images/mm.JPG" alt="Cream Coffee">
+                <h2>CREAM COFFEE</h2>
+                <div class="price">$190</div>
+                <button type="button" class="addtocart" data-item="5">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="Images/soya cappucino.JPG" alt="Soya Cappuccino">
+                <h2>SOYA CAPPUCINO</h2>
+                <div class="price">$220</div>
+                <button type="button" class="addtocart" data-item="6">Add to Cart</button>
+            </div>
+
+            
+            <div class="item">
+                <img src="Images/expresso.JPG" alt="">
+                <h2>EXPRESSO</h2>
+                <div class="price">$240</div>
+                <button type="button" class="addtocart" data-item="6">Add to Cart</button>
+            </div>
+
+            
+            <div class="item">
+                <img src="Images/mojito.JPG" alt="">
+                <h2>MOJITO</h2>
+                <div class="price">$210</div>
+                <button type="button" class="addtocart" data-item="6">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <!-- Cart Section -->
+        <div class="carttab">
+            <h1>Cart</h1>
+            <div class="listcart">
+                <div class="item">
+                    <img src="Images/cappucino.JPG" alt="Cappuccino">
+                    <div class="name">CAPPUCINO</div>
+                    <div class="totalprice">$<span id="spanprice1">180</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem1">-</span>
+                        <span id="qtyitem1">1</span>
+                        <span class="plus" id="plusitem1">+</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Images/mocha.JPG" alt="Mocha">
+                    <div class="name">MOCHA</div>
+                    <div class="totalprice">$<span id="spanprice2">200</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem2">-</span>
+                        <span id="qtyitem2">1</span>
+                        <span class="plus" id="plusitem2">+</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Images/ice coffee.JPG" alt="Ice Coffee">
+                    <div class="name">ICE COFFEE</div>
+                    <div class="totalprice">$<span id="spanprice3">240</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem3">-</span>
+                        <span id="qtyitem3">1</span>
+                        <span class="plus" id="plusitem3">+</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Images/nn.JPG" alt="Choco Coffee">
+                    <div class="name">CHOCO COFFEE</div>
+                    <div class="totalprice">$<span id="spanprice4">210</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem4">-</span>
+                        <span id="qtyitem4">1</span>
+                        <span class="plus" id="plusitem4">+</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Images/mm.JPG" alt="Cream Coffee">
+                    <div class="name">CREAM COFFEE</div>
+                    <div class="totalprice">$<span id="spanprice5">190</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem5">-</span>
+                        <span id="qtyitem5">1</span>
+                        <span class="plus" id="plusitem5">+</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Images/soya cappucino.JPG" alt="Soya Cappuccino">
+                    <div class="name">SOYA CAPPUCINO</div>
+                    <div class="totalprice">$<span id="spanprice6">220</span></div>
+                    <div class="quantity">
+                        <span class="minus" id="minusitem6">-</span>
+                        <span id="qtyitem6">1</span>
+                        <span class="plus" id="plusitem6">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn1">
+                <button class="close" id="closechkout">Close</button>
+                <button class="checkout" id="chckout">CHECK OUT</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- menu ends -->
+
+<!-- booking -->
+
+ <div class="page2" id="page2">
+        <div class="boxtable">
+        
+                <div class="contenttable">
+                    <h1>Booking</h1> 
+                    
+              
+                </div>
+                <div class="reservation">
+                    <form>
+                        <h1 class="h1reserve">Take A Reservation</h1>
+                        <input type="text" placeholder="Name" id="name"><br><br>
+                        <input type="text" placeholder="E-Mail" id="email"><br><br>
+                        <input type="text" placeholder="Phone" id="phone"><br><br>
+                        <input type="date" id="date"><br><br>
+                        <input type="time" id="time"><br><br>
+                        <button onclick="tablebook()" class="tablebutton">Book A Table</button>
+                    </form>
+                </div>
+        </div>
+    </div> 
+    <!-- login -->
+    <div class="loginpage" id="page8">
+        <div class="hedinglogin">
+        <h1>LOGIN</h1><br><br>
+        </div>
+        <div class="login">
+        
+            <div class="login-form">
+                <h4>Username</h4>
+                <div class="username-input">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Enter your email" id="username">
+                </div>
+                <h4>Password</h4>
+                <div class="password-input">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Type your password">
+                </div>
+                <p class="forgot-password">Forgot password?</p><br>  
+            </div>
+            <button class="login-btn" onclick="func()">LOGIN</button>
+            <div class="alternative-signup">
+                <p>New to login? <span>Sign-up</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- login ends -->
+
+    <!-- contact -->
+     
+    <div class="contactpage" id="contactpagee">
+        <div class="contactus">
+           <h1 class="us">CONTACT FORM</h1> 
+        </div>
+    
+        <div class="formvalidation">
+           
+            <div class="inputcontrol">
+                <label for="username1">Username</label>
+                <input id="username1" name="username" type="text">
+               
+            </div>
+            <div class="inputcontrol">
+                <label for="mail1">Email</label>
+                <input id="mail1" name="Email" type="text">
+              
+            </div>
+            <div class="inputcontrol">
+                <label for="password1">Password</label>
+                <input id="password1" name="password1" type="password">
+              
+            </div>
+            <div class="inputcontrol">
+                <label for="password2">Password again</label>
+                <input id="password2" name="password2" type="password">
+            
+            </div>
+            <div class="inputcontrol">
+                <label for="message">Message</label>
+                <input id="mess" placeholder="Enter your message" type="text">
+              
+            </div>
+            <button type="button" onclick="submitForm()">Sign up</button>
+        </div>
+    </div>
+
+    <!-- todo -->
+<div id="page7">
+    <div id="#todopagee">
+        <div class="todo">
+            <h1>To-do List</h1>
+        <input id="input">
+        <button onclick="add()" id="clkbtn">Add</button>
+        <ul id="listcontainer">
+        
+            <li>Hello
+                <button onclick="deleteitem(event)" id="delbtn">Delete</button>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- review section -->
+<div class="review" id="reviewpage">
+    <div class="reviewheader">
+        <h1>Our Customer Review</h1>
+    </div>
+    <div class="reviewbigbox">
+        <div class="rvbox">
+            <img src="Images/rv1.JPG" class="rvimg" alt="">
+            <p>I really like the atmosphere, good coffee, and nice interior. This is a good place to study or chill with friends. The drinks and foods were all tasty and worthwhile. </p>
+        </div>
+        <div class="rvbox">
+            <img src="Images/rv2.JPG" class="rvimg" alt="">
+            <p> This place is amazing! They offered the best coffee and showed the best attitude to its costumers. Internet connection is very fast and is unlimited as well. </p>
+        </div>
+        <div class="rvbox">
+            <img src="Images/rv3.JPG" class="rvimg" alt="">
+            <p> This place is indeed perfect for studying and chilling out. It was very quiet and air-conditioned. I just want to keep coming back to this place. Thank you!</p>
+        </div>
+        <div class="rvbox">
+            <img src="Images/rv4.JPG" class="rvimg" alt="">
+            <p>If you’re up for a fresh place with beautiful architecture then this is a must to visit.</p>
+        </div>
+    </div>
+ </div>
+ 
+<!-- footer -->
+
+<footer id="footerpage">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Magic Mugs Cafe</h2>
+                <p>Welcome to our cozy cafe! Enjoy delicious coffee and a warm atmosphere.</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-coffee"></i> Menu</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-star"></i>Review</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> Email: info@cafeshop.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Coffee St, Bean City, CA</p>
+           
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Café Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
